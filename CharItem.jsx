@@ -15,9 +15,10 @@ export default class CharItem extends Component {
     //  save for later: <a href={url}>
     return (
       <div>
+
         <h2>CharItem</h2>
-        {/* <span style={element1}>  {this.props.name}   </span>
-        <span style={element2}>{this.props.desc}   </span> */}
+        <span style={element1}>  {this.props.name}   </span>
+        <span style={element2}>{this.props.desc}   </span>
       </div>
     );
   }

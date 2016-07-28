@@ -14,34 +14,35 @@ var titleStyle = {
     // msTransition: 'all'
  };
 
-export class NameImgDesc extends Component {
-  render() {
-    return (
-      <div style={titleStyle}>
-        <h3>Name, Image, Description</h3>
-
-        <CharItem />
-        
-      </div>
-    );
-  }
-}
-
-
-// export class NameImgDesc extends Component {
+// export default class NameImgDesc extends Component {
 //   render() {
 //     return (
 //       <div style={titleStyle}>
 //         <h3>Name, Image, Description</h3>
-//         {this.props.json.data.results.filter(function(character){
-//           var name = character.name;
-//             if (name.toLowerCase().indexOf(charName.toLowerCase()) > -1) {
-//           return (
-//             <CharItem name={character.name} img={character.thumbnail.path}  desc={character.description}/>
-//           )}
-//         })}
+//
 //         <CharItem />
+//
 //       </div>
 //     );
 //   }
 // }
+
+
+export default class NameImgDesc extends Component {
+  render() {
+    return (
+      <div style={titleStyle}>
+        <h3>Name, Image, Description</h3>
+        {this.props.media.filter((character) => {
+          var databaseName = character.name.toString();
+          var inputName = this.props.charName.toString();
+          if (databaseName === inputName) {return true;}else{return false;}
+        }).map((character) => {
+            return (
+              <CharItem name={character.name} img={character.thumbnail.path}  desc={character.description} key={character.id} />
+            )
+          })}
+      </div>
+    );
+  }
+}

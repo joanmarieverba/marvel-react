@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import RetrieveMedia from './RetrieveMedia.jsx';
 import MediaSearchInput from './MediaSearchInput.jsx';
 import MediaSubmitButton from './MediaSubmitButton.jsx';
+import globalStyles from "./assets/styles/global.css";
   /**
    * A stateful component to store our app
    */
