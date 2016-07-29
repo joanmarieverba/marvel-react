@@ -13,20 +13,6 @@ var titleStyle = {
     msTransition: 'all'
  };
 
-// export default class NameImgDesc extends Component {
-//   render() {
-//     return (
-//       <div style={titleStyle}>
-//         <h3>Name, Image, Description</h3>
-//
-//         <CharItem />
-//
-//       </div>
-//     );
-//   }
-// }
-
-
 export default class NameImgDesc extends Component {
   render() {
     return (
@@ -34,7 +20,7 @@ export default class NameImgDesc extends Component {
         {this.props.media.filter((character) => {
           var databaseName = character.name.toString();
           var inputName = this.props.charName.toString();
-          if (databaseName === inputName) {return true;}else{return false;}
+          if (databaseName.toLowerCase().indexOf(inputName.toLowerCase()) > -1) {return true;}else{return false;}
         }).map((character) => {
             return (
               <CharItem name={character.name} img={character.thumbnail.path}  desc={character.description} key={character.id} />

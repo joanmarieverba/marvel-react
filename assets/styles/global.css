@@ -12,7 +12,8 @@
        url('../fonts/bangers-v8-latin-regular.svg#Bangers') format('svg'); /* Legacy iOS */
 }
 
-body {
+html, body, #root {
   margin: 0;
   padding: 0;
+  height: 100%;
 }

@@ -11,7 +11,7 @@ import globalStyles from "./assets/styles/global.css";
        backgroundImage: 'url("http://jmvtestsite.com/wp-content/uploads/2016/07/starry-sky-389083_1280.jpg")',
       //  position: "fixed",
        width: "100%",
-       height: "100%",
+      //  height: "150%",
        WebkitTransition: 'all',
        msTransition: 'all'
     };

@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 
 var inputBox = {
-  paddingTop: "50px",
+  paddingTop: "30px",
   textAlign: "center",
   display: "inline-block",
-  // margin: "0 auto",
+  fontFamily: "Arial",
+  fontSize: "12px",
+  fontWeight: "bold",
+  backgroundColor: "white",
+  border: "2px solid lightblue",
 }
 
 export default class MediaSearchInput extends Component {

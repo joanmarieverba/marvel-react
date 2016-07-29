@@ -37,12 +37,14 @@ var characterDescription = {
 
 export default class CharItem extends Component {
   render (){
-    var url = `${this.props.img}.jpg`
+    var url = `${this.props.img}.jpg`;
+    var description = this.props.desc;
+    if (description.length === 0) {description = "On secret assignment: information limited"}
     return (
       <div>
         <span style={characterName}>  {this.props.name}   </span>
         <img style={imageSingle} src={url} />
-        <span style={characterDescription}>{this.props.desc}   </span>
+        <span style={characterDescription}>{description } </span>
       </div>
     );
   }

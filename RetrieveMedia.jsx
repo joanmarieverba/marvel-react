@@ -66,29 +66,31 @@ export default class RetrieveMedia extends Component {
     }
 
 
+ //react calls render over and over again by the brower when it refreshes
   render() {
+    if (this.state.media !== "random number") {
     return (
       <div>
-      <NameImgDesc media={this.state.media} charName={this.props.charName}/>
+        <NameImgDesc media={this.state.media}  charName={this.props.charName}/>
       </div>
-    )}
-
+    );
+    } else {
+          return (
+      <div>
+        No results found
+      </div>
+    );
+    }
+  }
   };
 
-//  react calls render over and over again by the brower when it refreshes
-  // render() {
-  //   if (this.state.media !== "random number") {
-  //   return (
-  //     <div>
-  //       <NameImgDesc media={this.state.media}/>
-  //     </div>
-  //   );
-  //   } else {
-  //         return (
-  //     <div>
-  //       No results found
-  //     </div>
-  //   );
-  //   }
-  // }
-  // };
+
+
+    // render() {
+    //   return (
+    //     <div>
+    //     <NameImgDesc media={this.state.media} charName={this.props.charName}/>
+    //     </div>
+    //   )}
+    //
+    // };
