@@ -44,7 +44,7 @@ export default class CharItem extends Component {
       <div>
         <span style={characterName}>  {this.props.name}   </span>
         <img style={imageSingle} src={url} />
-        <span style={characterDescription}>{description } </span>
+        <span style={characterDescription}>{description} </span>
       </div>
     );
   }

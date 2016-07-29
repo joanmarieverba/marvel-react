@@ -4,6 +4,8 @@ import RetrieveMedia from './RetrieveMedia.jsx';
 import MediaSearchInput from './MediaSearchInput.jsx';
 import MediaSubmitButton from './MediaSubmitButton.jsx';
 import globalStyles from "./assets/styles/global.css";
+// import { Router, Route, Link, browserhistory, IndexRoute } from 'react-router';
+// import NoMatch from './NoMatch.jsx';
   /**
    * A stateful component to store our app
    */
@@ -11,7 +13,7 @@ import globalStyles from "./assets/styles/global.css";
        backgroundImage: 'url("http://jmvtestsite.com/wp-content/uploads/2016/07/starry-sky-389083_1280.jpg")',
       //  position: "fixed",
        width: "100%",
-      //  height: "150%",
+       minHeight: "100%",
        WebkitTransition: 'all',
        msTransition: 'all'
     };

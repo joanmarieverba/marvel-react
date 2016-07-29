@@ -52,7 +52,7 @@ export default class RetrieveMedia extends Component {
 
           this.setState({media: response.data.results});
         } else if (response && response.Response === "False") {
-          this.setState({media: "random number"});
+          this.setState({media: null});
         } else {
           console.error('Unknown error.');
         }
@@ -67,30 +67,10 @@ export default class RetrieveMedia extends Component {
 
 
  //react calls render over and over again by the brower when it refreshes
-  render() {
-    if (this.state.media !== "random number") {
-    return (
-      <div>
-        <NameImgDesc media={this.state.media}  charName={this.props.charName}/>
-      </div>
-    );
-    } else {
-          return (
-      <div>
-        No results found
-      </div>
-    );
-    }
-  }
-  };
-
-
-
-    // render() {
-    //   return (
-    //     <div>
-    //     <NameImgDesc media={this.state.media} charName={this.props.charName}/>
-    //     </div>
-    //   )}
-    //
-    // };
+    render() {
+      return (
+        <div>
+        <NameImgDesc media={this.state.media} charName={this.props.charName}/>
+        </div>
+      )}
+    };
