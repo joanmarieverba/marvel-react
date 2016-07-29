@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom';
 import CharItem from './CharItem.jsx';
 
 var titleStyle = {
-    border: "2px solid purple",
     // display: "inline-block",
     // marginTop: "50px",
     // marginLeft: '50px',
     // fontFamily: "Righteous",
     // fontSize: "14px",
     // padding: '15px',
-    // WebkitTransition: 'all',
-    // msTransition: 'all'
+    WebkitTransition: 'all',
+    msTransition: 'all'
  };
 
 // export default class NameImgDesc extends Component {
@@ -32,7 +31,6 @@ export default class NameImgDesc extends Component {
   render() {
     return (
       <div style={titleStyle}>
-        <h3>Name, Image, Description</h3>
         {this.props.media.filter((character) => {
           var databaseName = character.name.toString();
           var inputName = this.props.charName.toString();

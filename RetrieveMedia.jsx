@@ -43,7 +43,6 @@ export default class RetrieveMedia extends Component {
       this.state={
         media: []    //this is the initial state, needs to be empty at first
       }
-      console.log("Props", props);
     }
 
     getOneMedia(charName){  //put it in a function so that it only gets called once
@@ -52,8 +51,6 @@ export default class RetrieveMedia extends Component {
         if (response && response.status === "Ok") {
 
           this.setState({media: response.data.results});
-          ///media comes back with response data in an array
-          console.log("Media ", this.state.media);
         } else if (response && response.Response === "False") {
           this.setState({media: "random number"});
         } else {
@@ -72,8 +69,6 @@ export default class RetrieveMedia extends Component {
   render() {
     return (
       <div>
-      <h2>Retrieve Media</h2>
-
       <NameImgDesc media={this.state.media} charName={this.props.charName}/>
       </div>
     )}

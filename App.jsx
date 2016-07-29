@@ -9,7 +9,9 @@ import globalStyles from "./assets/styles/global.css";
    */
    var pageTitleStyle = {
        backgroundImage: 'url("http://jmvtestsite.com/wp-content/uploads/2016/07/starry-sky-389083_1280.jpg")',
-       position: "fixed",
+      //  position: "fixed",
+       width: "100%",
+       height: "100%",
        WebkitTransition: 'all',
        msTransition: 'all'
     };
@@ -17,6 +19,7 @@ import globalStyles from "./assets/styles/global.css";
   var topBanner = {
       width : "100%",
       position: "fixed",
+      textAlign: "center",
       fontFamily: 'Bangers',
       fontSize: "36px",
       top: "0",
@@ -26,6 +29,13 @@ import globalStyles from "./assets/styles/global.css";
       WebkitTransition: 'all',
       msTransition: 'all'
     }
+
+  var centerButtons = {
+      paddingTop: "15px",
+      margin: "0 auto",
+      display: "block",
+      width: "310px",
+  }
 
 
   class App extends Component {
@@ -51,9 +61,11 @@ import globalStyles from "./assets/styles/global.css";
     render() {
       return (
         <div style={pageTitleStyle}>
-          {/* <span style={topBanner}>Marvel Character Readout</span> */}
-          <MediaSearchInput onSearchInputChange={this.handleSearchInputChange.bind(this)}/>
-          <MediaSubmitButton onSubmitButtonClick={this.handleSubmitButtonClick.bind(this)}/>
+          <span style={topBanner}>Marvel Character Readout</span>
+          <div style={centerButtons}>
+            <MediaSearchInput onSearchInputChange={this.handleSearchInputChange.bind(this)}/>
+            <MediaSubmitButton onSubmitButtonClick={this.handleSubmitButtonClick.bind(this)}/>
+          </div>
           <RetrieveMedia charName={this.state.charName}/>
         </div>
       );

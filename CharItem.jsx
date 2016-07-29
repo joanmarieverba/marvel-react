@@ -1,24 +1,48 @@
 import React, {Component} from 'react';
 
-var element1 = {
-  display: "inline-block",
-  marginRight: "25px",
- };
-var element2 = {
-    display: "inline-block",
-    float: "right",
- };
+var characterName = {
+  display: "block",
+  padding: "10px",
+  width: "400px",
+  marginTop: "3em",
+  marginLeft: "auto",
+  marginRight: "auto",
+  border: "3px solid #73AD21",
+  textAlign: "center",
+// font-family: 'Roboto';
+  fontFamily: "Arial",
+  fontSize: "24px",
+  fontWeight: "bold",
+  backgroundColor: "white",
+}
+
+var imageSingle = {
+  width: "425px",
+  height: "425px",
+  display: "block",
+  margin: "0 auto",
+}
+
+var characterDescription = {
+  display: "block",
+  padding: "10px",
+  width: "400px",
+  margin: "0 auto",
+  border: "3px solid #73AD21",
+  textAlign: "justify",
+  fontFamily: "Verdana",
+  fontSize: "14px",
+  backgroundColor: "yellow",
+}
 
 export default class CharItem extends Component {
-  render() {
-    // var url = `http://www.imdb.com/title/${this.props.id}`
-    //  save for later: <a href={url}>
+  render (){
+    var url = `${this.props.img}.jpg`
     return (
       <div>
-
-        <h2>CharItem</h2>
-        <span style={element1}>  {this.props.name}   </span>
-        <span style={element2}>{this.props.desc}   </span>
+        <span style={characterName}>  {this.props.name}   </span>
+        <img style={imageSingle} src={url} />
+        <span style={characterDescription}>{this.props.desc}   </span>
       </div>
     );
   }

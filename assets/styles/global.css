@@ -11,3 +11,8 @@
        url('../fonts/bangers-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/bangers-v8-latin-regular.svg#Bangers') format('svg'); /* Legacy iOS */
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
