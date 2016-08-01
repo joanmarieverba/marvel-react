@@ -18,17 +18,18 @@ var titleStyle = {
    fontFamily: "Arial",
    fontSize: "24px",
    fontWeight: "bold",
+   color: "white",
 }
 
 export default class NameImgDesc extends Component {
   render() {
-    var filteredCharacters = this.props.media.filter((character) => {
+      var filteredCharacters = this.props.media.filter((character) => {
       var databaseName = character.name.toString();
       var inputName = this.props.charName.toString();
       if (databaseName.toLowerCase().indexOf(inputName.toLowerCase()) > -1) {return true;}else{return false;}
     });
 
-    if (filteredCharacters.length > 0) {
+    if (filteredCharacters.length > 0  &&  this.props.charName.length > 0) {
         return (
           <div style={titleStyle}>
           {filteredCharacters.map((character) => {

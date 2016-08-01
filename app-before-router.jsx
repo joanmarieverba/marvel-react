@@ -4,9 +4,8 @@ import RetrieveMedia from './RetrieveMedia.jsx';
 import MediaSearchInput from './MediaSearchInput.jsx';
 import MediaSubmitButton from './MediaSubmitButton.jsx';
 import globalStyles from "./assets/styles/global.css";
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
-import Welcome from './Welcome.jsx';
-import NoMatch from './NoMatch.jsx';
+// import { Router, Route, Link, browserhistory, IndexRoute } from 'react-router';
+// import NoMatch from './NoMatch.jsx';
   /**
    * A stateful component to store our app
    */
@@ -75,11 +74,6 @@ import NoMatch from './NoMatch.jsx';
     }
   };
   ReactDOM.render(
-    <Router history={browserHistory}>
-
-      <Route path="/" component={Welcome} />
-      <Route path="main" component={App} />
-      <Route path="*" component={NoMatch} />
-    </Router>,
+    <App />,
     document.getElementById('root')
   );
